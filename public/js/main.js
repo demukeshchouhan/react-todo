@@ -19060,7 +19060,7 @@ var ListItem = React.createClass({
    render: function () {
       return React.createElement(
          "li",
-         null,
+         { className: "cust_list " },
          React.createElement(
             "strong",
             null,
@@ -19092,7 +19092,6 @@ var ListManager = React.createClass({
    },
    handleSubmit: function (e) {
       e.preventDefault();
-
       var currentItems = this.state.items;
       currentItems.push(this.state.newItemText);
       this.setState({
@@ -19103,7 +19102,7 @@ var ListManager = React.createClass({
    render: function () {
       return React.createElement(
          "div",
-         null,
+         { className: "panel callout cust_app_panel" },
          React.createElement(
             "h3",
             null,
@@ -19115,7 +19114,7 @@ var ListManager = React.createClass({
             React.createElement("input", { type: "text", onChange: this.handleChange, value: this.state.newItemText }),
             React.createElement(
                "button",
-               null,
+               { className: "button small round primary" },
                "Add !"
             )
          ),
@@ -19131,6 +19130,8 @@ var React = require("react");
 var ReactDOM = require("react-dom");
 var ListManager = require("./components/ListManager.jsx");
 
-ReactDOM.render(React.createElement(ListManager, { title: "Fruits" }), document.getElementById("container"));
+ReactDOM.render(React.createElement(ListManager, { title: "Fruits" }), document.getElementById("fruits_container"));
+ReactDOM.render(React.createElement(ListManager, { title: "To Do" }), document.getElementById("todo_container"));
+ReactDOM.render(React.createElement(ListManager, { title: "Festival" }), document.getElementById("festival_container"));
 
 },{"./components/ListManager.jsx":161,"react":158,"react-dom":29}]},{},[162]);

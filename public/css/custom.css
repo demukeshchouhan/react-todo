@@ -1,0 +1,30 @@
+*{
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+}
+*::before,
+*::after{
+   box-sizing: border-box;
+}
+
+h1,h2,h3,h4,h5,h6{
+   color: #653F1F;
+}
+
+.cust_list{
+   padding: 0.2em 0.5em;
+   margin:0.2em 0;
+   list-style: circle;
+   background: #F5F5F5;
+   border-bottom: 1px solid #61b6d9;
+}
+.padd{
+   padding: 1em 0;
+}
+
+.cust_app_panel{
+   border-color: #008CBA !important;
+   background: #F9F9F9 !important;
+   box-shadow: 0 4px 14px rgba(37, 37, 37, 0.19);
+}
